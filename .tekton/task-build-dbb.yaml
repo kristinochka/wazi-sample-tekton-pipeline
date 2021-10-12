@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: build-dbb
+spec:
+  steps:
+    - name: goodbye
+      image: ibmcom/pipeline-base-image
+      script: |
+        #!/bin/bash
+        echo "Running dbb build task now..."
+        echo $PWD
+        whoami
