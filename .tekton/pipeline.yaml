@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: dbb-pipeline
+spec:
+  tasks:
+  - name: git-clone
+    taskRef:
+      name: git-clone
+  - name: build-dbb
+    runAfter:
+     - git-clone
+    taskRef:
+      name: build-dbb
