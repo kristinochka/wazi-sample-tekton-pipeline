@@ -5,7 +5,7 @@ metadata:
 spec:
   steps:
     - name: goodbye
-      image: ibmcom/pipeline-base-image
+      image: ibmcom/pipeline-base-image:2.6
       script: |
         #!/bin/bash
         echo "Running dbb build task now..."
